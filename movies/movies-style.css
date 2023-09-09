@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #24252a; */
+}
+
+::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(42, 42, 42);
+}
+::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 50px;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(44, 1, 44) 0%, rgb(35, 4, 35) 20%,  black 75%);
+    height: 100%;
+    width: 100%;
+    overscroll-behavior-inline: contain;
+}
+
+@font-face {
+    font-family: nunito;
+    src: url(../font/Nunito-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Light.ttf);
+}
+
+.logo{
+    font-family: nunito;
+    color: #edf0f1;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+li, a, button{
+    font-family: nunito;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav_list{
+    list-style: none;
+}
+
+.nav_list li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_list li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_list li a:hover{
+    color: purple;
+}
+
+.signin-button{
+    padding : 9px 25px;
+    background-color: #edf0f1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: black;
+}
+
+.signin-button:hover{
+    opacity: 0.7;
+}
+
+.jumbotron{
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    box-shadow: 0 5px 20px black;
+}
+
+.jumbotron-video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.jumbotron-title{
+    font-family: Nunito;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 185px;
+}
+
+.jumbotron-description{
+    font-family: roboto;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 185px;
+    width: 50%;
+    background-color: rgba(0,0,0, 0.5);
+    padding: 5px;
+}
+
+.play-button{
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-color: purple;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    position: absolute;
+    top: 500px;
+    left: 185px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.play-button:hover{
+    color: purple;
+    background-color: white;
+}
+
+.blur{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.action-movie-container{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    background-color: rgba(0,0,0, 0.5);
+    height: 500px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    gap: 10px;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+
+
+.action-element{
+    position: relative;
+    margin-left: 20px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.action-element:hover{
+    transform: scale(1.1);
+}
+
+.movie-thumbnail{
+    position: relative;
+    top: 75px;
+    border-radius: 10px;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.title{
+    font-family: roboto;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 20px;
+    background-color: rgba(0,0,0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.action-label{
+    width: 70%;
+    margin-top: 700px;
+    position: relative;
+    left: 30px;
+    font-family: nunito;
+    color: rgb(207, 207, 207);
+}
+
+.animation-label{
+    width: 70%;
+    margin-top: 100px;
+    position: relative;
+    left: 30px;
+    font-family: nunito;
+    color: rgb(207, 207, 207);
+}
+
+@media (max-width:1300px){
+    .jumbotron{
+        height: 500px;
+    }
+    .jumbotron-description{
+        font-size: 15px;
+    }
+    .play-button{
+        top: 350px;
+    }
+    .action-label{
+        margin-top: 500px;
+    }
+    .action-movie-container{
+        height: 350px;
+    }
+    .movie-thumbnail{
+        height: 240px;
+        top: 55px;
+    }
+    .title{
+        font-size: 15px;
+    }
+}

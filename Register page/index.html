@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="register-style.css">
+</head>
+<body>
+  <div class="bg-image">
+    <img src="../images/bladerunner.jpg" alt="">
+    <div class="blur"></div>
+  </div>
+  <div class="register-container">
+      <h1 class="logo">JetFlix</h1>
+    <form action="../movies/index.html" class="register-form">
+      <input type="text" class = "input-box"  id="name" placeholder="Full Name">
+      <input type="email" class = "input-box" id="email" placeholder="E-mail">
+      <input type="password" class = "input-box" id="password" placeholder="Password">
+      <input type="password" class="input-box" id="confirm-password" placeholder="Confirm Password">
+      <label for="dob" class="dob-label">Date of Birth: </label>
+      <input type="date" class="input-box" id="dob" placeholder="Date of Birth">
+      <label for="male">Male</label>
+      <input type="radio" class = "gender-radio" id="male" placeholder="Date of Birth" name="gender">
+      <label for="female">Female</label>
+      <input type="radio" class = "gender-radio" id="female" placeholder="Date of Birth" name="gender">
+      <br>
+      <br>
+      <label for="terms-condition-checkbox" class="terms-conditions-label">I Agree To The Terms and Conditions</label>
+      <input type="checkbox" class = "terms-condition-checkbox" id="terms-condition-checkbox">
+      <br>
+      <br>
+      <button type="button" class="register-button" onclick="validateData()">Register</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
